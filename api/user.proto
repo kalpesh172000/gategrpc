@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package user;
+
+//this is needed for rest mapping 
+import "google/api/annotations.proto";
+
+
+option go_package = "github.com/kalpesh172000/gategrpc/user;user";
+
+
+service UserService {
+  rpc GetProfile(GetProfileRequest) returns (GetProfileResponse){
+    option (google.api.http) = {
+      get: "/v1/user/{id}"
+    };
+  }
+}
+
+message GetProfileRequest {
+  string id = 1;
+  string token = 2;
+}
+
+message GetProfileResponse {
+  string id = 1;
+  string name = 2;
+  string email = 3;
+}
+
+
+
+
+
+
+
+
+
+

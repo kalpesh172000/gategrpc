@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package auth;
+
+
+option go_package = "github.com/kalpesh172000/gategrpc/auth;auth";
+
+
+service AuthService {
+  rpc Validate(ValidateRequest) returns (ValidateResponse);
+}
+
+message ValidateRequest {
+  string token = 1;
+}
+
+message ValidateResponse {
+  bool valid = 1;
+}
+
+
+
+
+
+
+
+
+
+
