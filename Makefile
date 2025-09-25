@@ -1,13 +1,25 @@
 .PHONY: gen
 
-gen: 
-	@mkdir -p gen/auth gen/user
-	@protoc -I api \
+gen:
+	@protoc \
+		-I api \
 		-I third_party/googleapis \
-		--go_out=gen --go_opt=paths=source_relative \
-		--go-grpc_out=gen --go-grpc_opt=paths=source_relative \
-		--grpc-gateway_out=gen --grpc-gateway_opt=paths=source_relative \
-		api/*.proto
+		--go_out=services/common/gen/auth --go_opt=paths=source_relative \
+		--go-grpc_out=services/common/gen/auth --go-grpc_opt=paths=source_relative \
+		api/auth.proto
 
-buf: 
-	@buf generate
+	@protoc \
+		-I api \
+		-I third_party/googleapis \
+		--go_out=services/common/gen/user --go_opt=paths=source_relative \
+		--go-grpc_out=services/common/gen/user --go-grpc_opt=paths=source_relative \
+		--grpc-gateway_out=services/common/gen/user --grpc-gateway_opt=paths=source_relative \
+		api/user.proto
+
+
+start-auth:
+	@go run ./services/auth/*.go
+start-user:
+	@go run ./services/user/*.go
+start-gateway:
+	@go run ./gateway/*.go
