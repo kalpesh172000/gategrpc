@@ -30,9 +30,23 @@ func (u *userServer) GetProfile(ctx context.Context, req *user.GetProfileRequest
 	}
 
 	return &user.GetProfileResponse{
-		Id:    req.Id,
-		Name:  "john",
-		Email: "john@example.com",
+		Profile: &user.Profile{
+			Id:       req.Id,
+			Name:     "john",
+			Email:    "john@example.com",
+			Password: "",
+		},
+	}, nil
+}
+
+func (s *userServer) CreateProfile(ctx context.Context, req *user.CreateProfileRequest) (*user.CreateProfileResponse, error) {
+	// The `req` object is automatically populated with the data from the JSON body
+	log.Printf("%v",req)
+	name := req.GetName()
+	email := req.GetEmail()
+	password := req.GetPassword()
+	return &user.CreateProfileResponse{
+		Status: "Hello " + name + " " + email + " " + password,
 	}, nil
 }
 

@@ -6,15 +6,29 @@ package user;
 import "google/api/annotations.proto";
 
 
-option go_package = "github.com/kalpesh172000/gategrpc/gen/user";
+// option go_package = "github.com/kalpesh172000/gategrpc/gen/user";
+option go_package = "github.com/kalpesh172000/gategrpc/services/common/gen/user";
 
 
 service UserService {
   rpc GetProfile(GetProfileRequest) returns (GetProfileResponse){
     option (google.api.http) = {
-      get: "/v1/user/{id}"
+      get: "/user/{id}"
     };
   }
+  rpc CreateProfile(CreateProfileRequest) returns (CreateProfileResponse) {
+    option (google.api.http) = {
+      post: "/user"
+    };
+  }
+}
+
+
+message Profile {
+  string id = 1;
+  string name = 2;
+  string email = 3;
+  string password = 4;
 }
 
 message GetProfileRequest {
@@ -23,9 +37,17 @@ message GetProfileRequest {
 }
 
 message GetProfileResponse {
-  string id = 1;
-  string name = 2;
-  string email = 3;
+  Profile profile = 1;
+}
+
+message CreateProfileRequest {
+  string name = 1 [json_name = "name"];
+  string email = 2 [json_name = "email"];
+  string password = 3 [json_name = "password"];
+}
+
+message CreateProfileResponse {
+  string status = 1;
 }
 
 
