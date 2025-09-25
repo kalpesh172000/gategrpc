@@ -1,7 +1,7 @@
 .PHONY: gen
 
 gen: 
-	@mkdir -p gen
+	@mkdir -p gen/auth gen/user
 	@protoc -I api \
 		-I third_party/googleapis \
 		--go_out=gen --go_opt=paths=source_relative \
