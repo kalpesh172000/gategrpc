@@ -120,7 +120,7 @@ const file_auth_proto_rawDesc = "" +
 	"\x10ValidateResponse\x12\x14\n" +
 	"\x05valid\x18\x01 \x01(\bR\x05valid2H\n" +
 	"\vAuthService\x129\n" +
-	"\bValidate\x12\x15.auth.ValidateRequest\x1a\x16.auth.ValidateResponseB-Z+github.com/kalpesh172000/gategrpc/auth;authb\x06proto3"
+	"\bValidate\x12\x15.auth.ValidateRequest\x1a\x16.auth.ValidateResponseB,Z*github.com/kalpesh172000/gategrpc/gen/authb\x06proto3"
 
 var (
 	file_auth_proto_rawDescOnce sync.Once

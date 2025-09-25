@@ -6,7 +6,7 @@ package user;
 import "google/api/annotations.proto";
 
 
-option go_package = "github.com/kalpesh172000/gategrpc/user;user";
+option go_package = "github.com/kalpesh172000/gategrpc/gen/user";
 
 
 service UserService {

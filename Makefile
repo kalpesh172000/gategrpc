@@ -1,6 +1,5 @@
 .PHONY: gen
 
-
 gen: 
 	@mkdir -p gen
 	@protoc -I api \

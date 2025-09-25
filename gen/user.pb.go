@@ -149,7 +149,7 @@ const file_user_proto_rawDesc = "" +
 	"\x05email\x18\x03 \x01(\tR\x05email2e\n" +
 	"\vUserService\x12V\n" +
 	"\n" +
-	"GetProfile\x12\x17.user.GetProfileRequest\x1a\x18.user.GetProfileResponse\"\x15\x82\xd3\xe4\x93\x02\x0f\x12\r/v1/user/{id}B-Z+github.com/kalpesh172000/gategrpc/user;userb\x06proto3"
+	"GetProfile\x12\x17.user.GetProfileRequest\x1a\x18.user.GetProfileResponse\"\x15\x82\xd3\xe4\x93\x02\x0f\x12\r/v1/user/{id}B,Z*github.com/kalpesh172000/gategrpc/gen/userb\x06proto3"
 
 var (
 	file_user_proto_rawDescOnce sync.Once

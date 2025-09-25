@@ -3,7 +3,7 @@ syntax = "proto3";
 package auth;
 
 
-option go_package = "github.com/kalpesh172000/gategrpc/auth;auth";
+option go_package = "github.com/kalpesh172000/gategrpc/gen/auth";
 
 
 service AuthService {
