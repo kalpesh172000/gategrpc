@@ -311,12 +311,13 @@ const file_user_proto_rawDesc = "" +
 	"\x05email\x18\x02 \x01(\tR\x05email\x12\x1a\n" +
 	"\bpassword\x18\x03 \x01(\tR\bpassword\"/\n" +
 	"\x15CreateProfileResponse\x12\x16\n" +
-	"\x06status\x18\x01 \x01(\tR\x06status2\xbb\x01\n" +
+	"\x06status\x18\x01 \x01(\tR\x06status2\xbe\x01\n" +
 	"\vUserService\x12S\n" +
 	"\n" +
 	"GetProfile\x12\x17.user.GetProfileRequest\x1a\x18.user.GetProfileResponse\"\x12\x82\xd3\xe4\x93\x02\f\x12\n" +
-	"/user/{id}\x12W\n" +
-	"\rCreateProfile\x12\x1a.user.CreateProfileRequest\x1a\x1b.user.CreateProfileResponse\"\r\x82\xd3\xe4\x93\x02\a\"\x05/userB<Z:github.com/kalpesh172000/gategrpc/services/common/gen/userb\x06proto3"
+	"/user/{id}\x12Z\n" +
+	"\rCreateProfile\x12\x1a.user.CreateProfileRequest\x1a\x1b.user.CreateProfileResponse\"\x10\x82\xd3\xe4\x93\x02\n" +
+	":\x01*\"\x05/userB<Z:github.com/kalpesh172000/gategrpc/services/common/gen/userb\x06proto3"
 
 var (
 	file_user_proto_rawDescOnce sync.Once

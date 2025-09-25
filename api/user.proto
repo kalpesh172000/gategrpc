@@ -18,7 +18,8 @@ service UserService {
   }
   rpc CreateProfile(CreateProfileRequest) returns (CreateProfileResponse) {
     option (google.api.http) = {
-      post: "/user"
+      post: "/user";
+      body: "*"
     };
   }
 }
